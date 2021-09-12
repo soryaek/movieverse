@@ -71,7 +71,7 @@ class App extends Component {
                 <PrivateRoute exact path="/dashboard" component={Dashboard} />
                 <PrivateRoute exact path="/Homepage" component={Homepage} />
                 <PrivateRoute exact path="/Genre" component={Genre} />
-                <PrivateRoute exact path="/topratedmovies" component={TopRatedMovies} />
+                <PrivateRoute exact path="/topratedmov ies" component={TopRatedMovies} />
                 <PrivateRoute exact path="/nowplaying" component={NowPlaying} />
                 <PrivateRoute exact path="/popularmovies" component={PopularMovies} />
                 <PrivateRoute exact path="/searchadd" component={SearchAdd} />
