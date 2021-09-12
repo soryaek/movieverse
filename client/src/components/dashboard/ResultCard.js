@@ -36,7 +36,7 @@ export const ResultCard = ({ movie }) => {
           {/* <p className="overview">{movie.overview}</p> */}
           <p className="rating">Rating: {movie.vote_average}/10</p>
        
-          <p className="overview">{movie.overview.substring(0,420)}</p>
+          <p className="overview">{movie.overview.substring(0,100)}</p>
         </div>
       </div>
 

@@ -180,7 +180,7 @@ header .nav-links li:last-child {
   width: 75%;
   background-color: white;
   padding: 5px 10px; 
-  border-radius: 5px;
+  border-radius: 20px;
   border: none;
   color: hsl(207, 62%, 14%);
   font-size: 1.25rem;
@@ -267,6 +267,9 @@ header .nav-links li:last-child {
   color: black;
   text-align: center;
 
+}
+.rating{
+  margin-bottom: 10px;
 }
 .result-card .info .release-date {
   font-size: 1rem;

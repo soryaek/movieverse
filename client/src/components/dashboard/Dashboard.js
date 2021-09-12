@@ -6,7 +6,7 @@ import { logoutUser } from "../../actions/authActions";
 import { TopRatedMovies } from "./TopRatedMovies";
 import { NowPlaying } from "./NowPlaying";
 import {Homepage} from "./Homepage";
-import {Header} from "./Header"
+import {Header} from "./Header";
 import { withRouter } from "react-router";
 
 
