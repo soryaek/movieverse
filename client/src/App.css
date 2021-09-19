@@ -91,10 +91,9 @@ header .inner-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* padding: 10px 0; */
   font-weight: 500;
   color:  black;
-   height:130px;
+  height:100px;
 }
 
 header a {
@@ -115,16 +114,21 @@ header .brand a {
 
 header .nav-links {
   padding: 0;
-  margin: 0;
+  margin-right: 70px;
   list-style: none;
   display: flex;
   align-items: center;
+  /* background-color: purple; */
+  
  
 }
 
 header .nav-links li {
   display: inline-block;
   margin-right: 30px;
+  text-transform: uppercase;
+  font-weight: 600;
+
 }
 
 header .nav-links li a,
@@ -138,6 +142,12 @@ header .brand a:hover{
 
 header .nav-links li:last-child {
   margin-right: 0;
+}
+
+.logout-btn{
+  margin-left:40px;
+
+
 }
 
 /* Genre Page */
@@ -154,11 +164,13 @@ header .nav-links li:last-child {
 
 .genre-item a{
   text-decoration: none;
-  color: black;
-  background-color: white;
+  /* color: black; */
+  color:white;
+  /* background-color: white; */
   padding: 5px;
   padding-left:15px;
   padding-right:15px;
+  border: 1px solid #ffffff;
 
 
 }
@@ -283,8 +295,9 @@ header .nav-links li:last-child {
 
 .result-card .controls button {
   /* margin-right: 10px; */
-  /* margin-left:28px; */
-  margin: 0;
+  margin-left:10px;
+  /* margin: 0; */
+  /* magin-left: 10px; */
 
 }
 
@@ -299,13 +312,12 @@ header .nav-links li:last-child {
   bottom: 0;
   left: 0;
   right: 0;
-  /* background-color: #008CBA; */
   background-color: white;
   opacity: 0.9;
   overflow: hidden;
-   width: 200px;
+  width: 200px;
   height: 0;
-  transition: 1s ease;
+  transition: 1.5s ease;
 }
 
 .poster-wrapper:hover .overview-overlay {
@@ -429,12 +441,15 @@ header .nav-links li:last-child {
   transition: all 0.3s ease;
   font-size: 1.25rem;
   padding: 5px;
-  margin: 0;
+  margin: 0 auto;
+  
 }
 
 .ctrl-btn:hover {
-  color: lightgrey;
+  color: #000000;
   cursor: pointer;
+  /* background-color: #ffffff;  */
+  /* padding: 5px; */
 }
 
 .movie-page .no-movies {
@@ -472,3 +487,74 @@ header .nav-links li:last-child {
   background-image: url('/neon-light.jpeg');
   /* padding-top: 200px; */
 }
+
+
+/* Logout */
+/* 
+.container-btn{
+  width: 400px;
+  height: 400px;
+  position: absolute;
+  left: 43%;
+  top: 50%; 
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-btn2{
+  width: 400px;
+  height: 400px;
+  position: absolute;
+  left: 57%;
+  top: 50%; 
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.center-btn {
+  width: 180px;
+  height: 60px;
+  position: absolute;
+}
+
+.btn-btn {
+  width: 180px;
+  height: 60px;
+  cursor: pointer;
+  background: transparent;
+  border: 1px solid #91C9FF;
+  outline: none;
+  transition: 1s ease-in-out;
+  text-transform: uppercase;
+}
+svg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  fill: none;
+  stroke: #fff;
+  stroke-dasharray: 150 480;
+  stroke-dashoffset: 150;
+  transition: 1s ease-in-out;
+}
+
+.btn-btn:hover {
+  transition: .5s ease-in-out;
+  /* background: #4F95DA; */
+/* }
+
+.btn-btn:hover svg {
+  stroke-dashoffset: -480;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+}
+
+.btn-btn span {
+  color: white;
+  font-size: 18px;
+  font-weight: 100;
+} */ 

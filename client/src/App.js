@@ -25,6 +25,9 @@ import { Genre  } from "./components/dashboard/Genre";
 import { Watched} from "./components/dashboard/Watched";
 import { Watchlist} from "./components/dashboard/Watchlist";
 import { UpcomingMovies} from "./components/dashboard/UpcomingMovies";
+import SendEmail from './components/dashboard/SendEmail';
+import BasicModal from './components/dashboard/BasicModal'; 
+import Logout  from "./components/dashboard/Logout";
 
 
 //Check for token to keep user logged in
@@ -71,13 +74,17 @@ class App extends Component {
                 <PrivateRoute exact path="/dashboard" component={Dashboard} />
                 <PrivateRoute exact path="/Homepage" component={Homepage} />
                 <PrivateRoute exact path="/Genre" component={Genre} />
-                <PrivateRoute exact path="/topratedmov ies" component={TopRatedMovies} />
+                <PrivateRoute exact path="/topratedmovies" component={TopRatedMovies} />
                 <PrivateRoute exact path="/nowplaying" component={NowPlaying} />
                 <PrivateRoute exact path="/popularmovies" component={PopularMovies} />
                 <PrivateRoute exact path="/searchadd" component={SearchAdd} />
                 <PrivateRoute exact path="/upcomingmovies" component={UpcomingMovies} />
                 <PrivateRoute exact path="/watched" component={Watched} />
                 <PrivateRoute exact path="/watchlist" component={Watchlist} /> 
+                <PrivateRoute exact path="/sendemail" component={SendEmail} /> 
+                <PrivateRoute exact path="/modal" component={BasicModal} /> 
+
+                <PrivateRoute exact path="/logout" component={Logout} />
               </Switch>
             </div>
           </Router>

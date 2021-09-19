@@ -20,6 +20,8 @@ export const ResultCard = ({ movie }) => {
     : false;
   const watchedDisabled = storedMovieWatched ? true : false;
 
+  
+
   return (
     <div className="result-card">
       <div className="poster-wrapper">
@@ -27,6 +29,7 @@ export const ResultCard = ({ movie }) => {
           <img
             src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
             alt={`${movie.title} Poster`}
+            onClick={<h1>hello</h1> }
           />
         ) : (
           <div className="filler-poster"></div>
@@ -47,20 +50,12 @@ export const ResultCard = ({ movie }) => {
         </div>
         <div className="controls">
           <button
-            className="btn"
+            className="btn btn-small waves-effect waves-light hoverable blue accent-3"
             // disabled={watchlistDisabled}
             onClick={() => addMovieToWatchlist(movie)}
           >
           Add to Favorite <i class="fas fa-heart"></i>
-          </button>
-         {/* <button
-            className="btn"
-            disabled={watchedDisabled}
-            onClick={() => addMovieToWatched(movie)}
-          >
-           <i class="fas fa-check"></i>
-          </button>  */}
-         
+          </button>         
         </div>
       </div>
     </div>
