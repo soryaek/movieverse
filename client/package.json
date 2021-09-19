@@ -20,6 +20,7 @@
     "express-session": "^1.17.1",
     "font-awesome": "^4.7.0",
     "fortawesome": "0.0.1-security",
+    "is-empty": "^1.2.0",
     "jwt-decode": "^2.2.0",
     "moment": "^2.29.1",
     "mongoose": "^5.12.3",
