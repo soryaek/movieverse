@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import {ResultCard} from "./ResultCard";
-import {SearchAdd} from "./SearchAdd";
 import {Header} from './Header'
+import {Footer} from './footer'
 
 export const UpcomingMovies = () => {
     const [upcomingMovies, setUpcomingMovies] = useState(""); 
@@ -16,7 +16,6 @@ export const UpcomingMovies = () => {
             }
         });
     }; 
-
     useEffect(() => {
         getUpcomingMovies();
     }, []); 
@@ -35,7 +34,8 @@ export const UpcomingMovies = () => {
                             </li>
                         )) }
                     </ul>
-            )}
+            )} <br/> <br/> <br/>
+            <Footer />
     </div>
     );
 };

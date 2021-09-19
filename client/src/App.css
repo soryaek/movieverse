@@ -224,17 +224,12 @@ header .nav-links li:last-child {
   margin-bottom: 20px;
 
 }
-/* .overlay {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background-color: #008CBA;
-  overflow: hidden;
-  width: 100%;
-  height: 0;
-  transition: .5s ease;
-} */
+.btn-add{
+  background-color: transparent;
+  color: #ffffff;
+  margin-left:30px;
+
+}
 
 .result-card:hover .overlay-info{
   height: 100%;
@@ -257,6 +252,7 @@ header .nav-links li:last-child {
 .result-card .poster-wrapper img:hover{
   border: 2px solid lightgrey;
   opacity: 0.5;
+  cursor: pointer;
   
 }
 .result-card .info {
@@ -294,13 +290,21 @@ header .nav-links li:last-child {
 
 
 .result-card .controls button {
-  /* margin-right: 10px; */
-  margin-left:10px;
-  /* margin: 0; */
-  /* magin-left: 10px; */
+  margin-top:5px;
+  margin-left:20px;
+  background-color: white;
+  text-transform: uppercase;
+  border-radius: 5px;
+  padding:5px 15px;
+ 
+}
+.result-card .controls button:hover {
+  cursor: pointer;
+  background-color: transparent;
+  color:#ffffff; 
+  
 
 }
-
 /*********************/
 .poster-wrapper {
   position: relative;
@@ -351,6 +355,10 @@ header .nav-links li:last-child {
   justify-content: space-between;
   margin-bottom: 30px;
 }
+.flt-right{
+  display: flex;
+ justify-content: flex-end;
+}
 .type{
   /* margin-left:8%; */
   margin: 0 auto;
@@ -362,13 +370,15 @@ header .nav-links li:last-child {
   text-align: center;
 }
 .count-pill {
-  display: block;
+  /* display: block; */
   background-color: white;
   padding: 5px 15px;
   font-size: 1.125rem;
   font-weight: 600;
   border-radius: 5px;
   color: var(--primary);
+
+  
 }
 
 .movie-page .heading {
@@ -452,6 +462,18 @@ header .nav-links li:last-child {
   /* padding: 5px; */
 }
 
+.btn-close{
+  color: white;
+  background: transparent;
+  float: right;
+
+}
+.btn-close:hover{
+  cursor: pointer;
+  color:black;
+  background-color: white;
+}
+
 .movie-page .no-movies {
   color: #c4c4c4;
   font-size: 3rem;
@@ -467,7 +489,7 @@ header .nav-links li:last-child {
   color: white;
   text-align: center;
   padding: 15px;
-  margin-top: 50px;
+  /* margin-top: 150px; */
   background-image: url('/neon-light.jpeg');
 }
 
@@ -487,74 +509,10 @@ header .nav-links li:last-child {
   background-image: url('/neon-light.jpeg');
   /* padding-top: 200px; */
 }
-
-
-/* Logout */
-/* 
-.container-btn{
-  width: 400px;
-  height: 400px;
-  position: absolute;
-  left: 43%;
-  top: 50%; 
-  transform: translate(-50%, -50%);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.btn-send{
+  margin: 0 40%;
 }
-
-.container-btn2{
-  width: 400px;
-  height: 400px;
-  position: absolute;
-  left: 57%;
-  top: 50%; 
-  transform: translate(-50%, -50%);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.center-btn {
-  width: 180px;
-  height: 60px;
-  position: absolute;
-}
-
-.btn-btn {
-  width: 180px;
-  height: 60px;
+.btn-send:hover{
   cursor: pointer;
-  background: transparent;
-  border: 1px solid #91C9FF;
-  outline: none;
-  transition: 1s ease-in-out;
-  text-transform: uppercase;
-}
-svg {
-  position: absolute;
-  left: 0;
-  top: 0;
-  fill: none;
-  stroke: #fff;
-  stroke-dasharray: 150 480;
-  stroke-dashoffset: 150;
-  transition: 1s ease-in-out;
-}
-
-.btn-btn:hover {
-  transition: .5s ease-in-out;
-  /* background: #4F95DA; */
-/* }
-
-.btn-btn:hover svg {
-  stroke-dashoffset: -480;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 
 }
-
-.btn-btn span {
-  color: white;
-  font-size: 18px;
-  font-weight: 100;
-} */ 

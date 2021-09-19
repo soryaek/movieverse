@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {faSearch, faPowerOff} from '@fortawesome/free-solid-svg-icons'
+import { faSearch, faPowerOff } from '@fortawesome/free-solid-svg-icons'
 
 
 export const Header = () => {
@@ -9,7 +9,6 @@ export const Header = () => {
     <header>
       <div className="container">
         <div className="inner-content">
-    
           <div className="brand">
             <Link to="/"><img src="LoveMovie.png" /></Link>
           </div>
@@ -25,12 +24,12 @@ export const Header = () => {
             </li>
             <li>
               <Link to="/SearchAdd" className="search-icon">
-                <FontAwesomeIcon icon={faSearch} />      
+                <FontAwesomeIcon icon={faSearch} />
               </Link>
             </li>
             <li>
-              <Link to="/logout" className="logout-btn"> 
-                <FontAwesomeIcon icon={faPowerOff} />      
+              <Link to="/logout" className="logout-btn">
+                <FontAwesomeIcon icon={faPowerOff} />
               </Link>
             </li>
           </ul>

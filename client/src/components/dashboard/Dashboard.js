@@ -10,7 +10,7 @@ class Dashboard extends Component {
     return (
       <div>
         <Homepage /> 
-        <br/> <br/> <br/>
+        <br/><br/><br/>
       </div>
     );
   }

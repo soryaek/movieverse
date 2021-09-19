@@ -34,7 +34,7 @@ export const NowPlaying = () => {
                         </li>
                     )) }
                 </ul>
-            )}
+            )} <br/> <br/> <br/>
             <Footer />
     </div>
     );

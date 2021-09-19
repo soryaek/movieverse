@@ -25,8 +25,6 @@ import { Genre  } from "./components/dashboard/Genre";
 import { Watched} from "./components/dashboard/Watched";
 import { Watchlist} from "./components/dashboard/Watchlist";
 import { UpcomingMovies} from "./components/dashboard/UpcomingMovies";
-import SendEmail from './components/dashboard/SendEmail';
-import BasicModal from './components/dashboard/BasicModal'; 
 import Logout  from "./components/dashboard/Logout";
 
 
@@ -61,15 +59,6 @@ class App extends Component {
               <Route exact path="/" component={Login} />
               <Route exact path="/register" component={Register} />
               <Route exact path="/login" component={Login} />
-              {/* <Route exact path="/Homepage" component={Homepage} />
-              <Route exact path="/Genre" component={Genre} />
-              <Route exact path="/topratedmovies" component={TopRatedMovies} />
-              <Route exact path="/nowplaying" component={NowPlaying} />
-              <Route exact path="/popularmovies" component={PopularMovies} />
-              <Route exact path="/searchadd" component={SearchAdd} />
-              <Route exact path="/upcomingmovies" component={UpcomingMovies} />
-              <Route exact path="/watched" component={Watched} />
-              <Route exact path="/watchlist" component={Watchlist} />  */}
               <Switch>
                 <PrivateRoute exact path="/dashboard" component={Dashboard} />
                 <PrivateRoute exact path="/Homepage" component={Homepage} />
@@ -81,9 +70,6 @@ class App extends Component {
                 <PrivateRoute exact path="/upcomingmovies" component={UpcomingMovies} />
                 <PrivateRoute exact path="/watched" component={Watched} />
                 <PrivateRoute exact path="/watchlist" component={Watchlist} /> 
-                <PrivateRoute exact path="/sendemail" component={SendEmail} /> 
-                <PrivateRoute exact path="/modal" component={BasicModal} /> 
-
                 <PrivateRoute exact path="/logout" component={Logout} />
               </Switch>
             </div>

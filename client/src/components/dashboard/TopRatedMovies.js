@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import {ResultCard} from "./ResultCard";
 import {Header} from './Header'
+import {Footer} from './footer'
  
 export const TopRatedMovies = (num) => {
     const [topRatedMovies, setTopRatedMovies] = useState(""); 
@@ -34,7 +35,8 @@ export const TopRatedMovies = (num) => {
                             </li>
                         )) }
                     </ul>
-            )}
+            )} <br/> <br/> <br/>
+            <Footer />
     </div>
     );
 };

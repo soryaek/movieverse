@@ -21,6 +21,7 @@ export const SearchAdd = () => {
                 setResults([]);
             }
         });
+        setQuery("");
        
     }; 
     return (

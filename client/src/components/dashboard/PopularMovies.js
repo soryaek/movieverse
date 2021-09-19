@@ -37,6 +37,7 @@ export const PopularMovies = (num) => {
                     )) }
                 </ul>
             )}
+             <br/> <br/> <br/>
            <Footer />
     </div>
     );
