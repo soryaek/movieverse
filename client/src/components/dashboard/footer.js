@@ -3,7 +3,7 @@ import React from 'react';
 export const Footer = () => { 
     return (
         <div className="footer">
-           &copy; LoveMovie 2021
+           &copy; Movieverse 2021
           
         </div>
     );
