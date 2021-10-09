@@ -25,10 +25,21 @@ The application has functionalties that allows user to add movie in watchlist/wa
 
 
 <h2>How to run this web application in the local environment step by step:</h2> 
-<h4> Step1: Download packages in both client and server sides</h4>
+<h4> Step 1: Download packages in both client and server sides</h4>
 <ul>
 <li>Client side: run this command line <b>cd client</b> in termnal and then <b>npm install</b></li>
 <li>Server side: open another terminal and make sure you don't close the terminal that is running the clent side. 
 Enter this command line <b>cd server</b> and then <b>npm install</b></li>
 <li>Once these packages are installed, it's ready for next step. </li>
 </ul>
+<h4> Step 2: It's time to start the applicaton</h4>
+<ul>
+  <li>In client folder, run <b>npm start</b></li>
+  <li>In server folder, run <b>npm start</b></li>
+  <li>Once both are running, go to your browser and type  <b>localhost:3000</b></li>
+  <li>The application should be running now. If it's not showing on the browser, try to reinstall the packages by removing the <b>node modules</b>
+  from client folder and server folder and then start over again from Step 1 </li>
+</ul>
+  
+  
+  
