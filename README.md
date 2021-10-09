@@ -1,7 +1,9 @@
 # movieverse
 <p> A web application where users are able to search for all type of movies or search by category from a third party API. 
 The application has functionalties that allows user to add movie in watchlist/watchedlist and also can share the list with friends through email.<p>
-
+  <br><p><b>> Coded in React.js, Node.js, MongoDB, Express.js, and Restful API
+</b> </p>
+<hr>
 <h4>Login page</h4>
 <img src="client/public/login.png" alt="login page" width="600px" height="auto"/>
 
