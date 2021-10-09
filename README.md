@@ -24,7 +24,7 @@ The application has functionalties that allows user to add movie in watchlist/wa
 <img src="client/public/search.png" alt="search page" width="600px" height="auto"/>
 
 
-<h2>How to run this web application in the local environment step by step:</h2> 
+<h2>How to run this web application in the local environment from step by step:</h2> 
 <h4> Step 1: Download packages in both client and server sides</h4>
 <ul>
 <li>Client side: run this command line <b>cd client</b> in termnal and then <b>npm install</b></li>
