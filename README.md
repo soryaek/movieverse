@@ -42,7 +42,7 @@ Enter this command line <b>cd server</b> and then <b>npm install</b></li>
   from client folder and server folder and then start over again from Step 1 </li>
 </ul>
 
-All done. 
+
   
   
   
