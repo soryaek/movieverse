@@ -55,15 +55,11 @@ class Register extends Component {
     return (
       <div id="register-page"> 
         <div style={{marginLeft:"auto", marginRight:"auto", width: "10%"}}>
-          <img src="/LoveMovie.png" alt="logo" />
+          <img src="/movieverse.png" alt="logo" />
         </div>
         <div className="container register-container">
           <div className="row">
             <div className="col s8 offset-s2">
-              {/* <Link to="/" className="btn-flat waves-effect">
-                <i className="material-icons left">keyboard_backspace</i> Back to
-                home
-              </Link> */}
               <div className="col s12" style={{ paddingLeft: "11.250px" }}>
                 <h4 style={{color: "black", textAlign:"center", paddingBottom:"10px"}}>Register</h4>
                 <p className="grey-text text-darken-1" style={{textAlign:"center"}}>

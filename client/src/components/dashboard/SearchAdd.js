@@ -33,7 +33,7 @@ export const SearchAdd = () => {
                     <div className="add-content">
                         <div className="input-wrapper">
                             <input type="text"
-                            placeholder="Search for a movie" 
+                            placeholder="Search for movie" 
                             value={query}
                             onChange={onChange}
                             />
@@ -41,7 +41,7 @@ export const SearchAdd = () => {
                         </div>
                     </div>
                 </div>
-                {results.length > 0 && 
+                {results.length > 0 &&
                 (
                     <ul className="results">
                         {results.map(movie => (
@@ -50,9 +50,8 @@ export const SearchAdd = () => {
                             </li>
                         )) }
                     </ul>
-                )} : (
-                <h4 className="txt-center"> </h4>
                 )
+            } 
                 
             </div>
         </form>

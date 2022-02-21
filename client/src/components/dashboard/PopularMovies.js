@@ -3,7 +3,7 @@ import {ResultCard} from "./ResultCard";
 import { Footer } from "./footer";
 import {Header} from './Header'
 
-export const PopularMovies = (num) => {
+export const PopularMovies = () => {
     const [popularMovies, setPopularMovies] = useState(""); 
     const getPopularMovies = () => {
         fetch(`https://api.themoviedb.org/3/trending/all/day?api_key=a64879763b86ab20c959a57ad7c5d005&adult=false`)

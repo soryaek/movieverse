@@ -18,13 +18,13 @@ class Login extends Component {
   componentDidMount() {
     // If logged in and user navigates to Login page, should redirect them to dashboard
     if (this.props.auth.isAuthenticated) {
-      this.props.history.push("/dashboard");
+      this.props.history.push("/home");
     }
   }
 
   componentWillReceiveProps(nextProps) {
     if (nextProps.auth.isAuthenticated) {
-      this.props.history.push("/dashboard");
+      this.props.history.push("/home");
     }
 
     if (nextProps.errors) {
@@ -56,15 +56,11 @@ class Login extends Component {
         
         <div id="login-page">
           <div style={{marginLeft:"auto", marginRight:"auto", width: "10%"}}>
-            <img src="/LoveMovie.png" alt="logo" />
+            <img src="/movieverse.png" alt="logo" />
           </div>
           <div className="container login-container">
             <div style={{ marginTop: "4rem" }} className="row">
               <div className="col s8 offset-s2">
-                {/* <Link to="/" className="btn-flat waves-effect">
-                  <i className="material-icons left">keyboard_backspace</i> Back to
-                  home
-                </Link> */}
                 <div className="col s12" style={{ paddingLeft: "11.250px" }}>
                   <h4 style={{color: "black", textAlign:"center", paddingBottom:"10px"}}>
                   Login

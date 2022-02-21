@@ -85,6 +85,7 @@ input:focus {
 header {
   background-color: white;
   margin-bottom: 80px;
+
  
 }
 header .inner-content {
@@ -190,29 +191,35 @@ header .nav-links li:last-child {
 
 .add-content .input-wrapper input{
   width: 75%;
-  background-color: white;
+  /* background-color: white; */
+  opacity: 0.9;
   padding: 5px 10px; 
-  border-radius: 20px;
-  border: none;
-  color: hsl(207, 62%, 14%);
+  border-radius: 5px;
+  border: 1px solid white;
+  /* color: hsl(207, 62%, 14%); */
   font-size: 1.25rem;
+  color: white;
 }
 .add-content .input-wrapper input:hover{
   box-shadow: #032541;
+  
 }
 
 .search-btn {
-  padding: 7px 10px; 
+  padding: 7px 20px; 
   margin-left: 5px;
   border-radius: 5px;
+  height: 55px;
 }
-
+.search-btn:hover {
+  cursor: pointer;
+}
 .results {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin-left:5%;
-  margin-right:5%;
+  /* margin-left:5%;
+  margin-right:5%; */
 }
 
 .results li {
@@ -292,17 +299,17 @@ header .nav-links li:last-child {
 .result-card .controls button {
   margin-top:5px;
   margin-left:20px;
-  background-color: white;
+  background-color: transparent;
   text-transform: uppercase;
   border-radius: 5px;
   padding:5px 15px;
+  color:#ffffff; 
  
 }
 .result-card .controls button:hover {
   cursor: pointer;
-  background-color: transparent;
-  color:#ffffff; 
-  
+  background-color: #ffffff;
+  color:#000000;
 
 }
 /*********************/
@@ -360,10 +367,10 @@ header .nav-links li:last-child {
  justify-content: flex-end;
 }
 .type{
-  /* margin-left:8%; */
   margin: 0 auto;
-  font-weight: 500;
-  margin-left:180px;
+  font-weight: 600;
+  margin-left:5%;
+  transform: uppercase;
 }
 
 .txt-center{
@@ -476,9 +483,9 @@ header .nav-links li:last-child {
 
 .movie-page .no-movies {
   color: #c4c4c4;
-  font-size: 3rem;
   text-align: center;
 }
+
 
 .footer {
   position: fixed;
@@ -515,4 +522,27 @@ header .nav-links li:last-child {
 .btn-send:hover{
   cursor: pointer;
 
+}
+
+.trailer-btn{
+  background-color:white;
+  color:black;
+  width: 160px;
+  text-align: center;
+  margin-bottom:5px;
+
+}
+
+.trailer-btn:hover{
+  cursor: pointer;
+  opacity: .9;
+}
+
+.prev-next-btn{
+  text-align: center;
+ 
+}
+.prev-next-btn button:hover{
+  background-color: transparent;
+  color:white;
 }

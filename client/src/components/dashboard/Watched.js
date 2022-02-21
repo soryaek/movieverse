@@ -51,7 +51,7 @@ export const Watched = () => {
       <div className="movie-page">
         <div className="container">
           <div className="header">
-            <h1 className="heading">Watched Movies</h1>
+            <h3 className="heading">Watched Movies</h3>
             <div className="flt-right">
               <button className="count-pill" onClick={handleOpen}>
                 <FontAwesomeIcon icon={faShareSquare} />
@@ -99,7 +99,7 @@ export const Watched = () => {
               ))}
             </div>
           ) : (
-              <h2 className="no-movies">No movies in your list!</h2>
+              <h5 className="no-movies">No movies in your list!</h5>
             )}
         </div> <br /> <br /> <br />
         <Footer />

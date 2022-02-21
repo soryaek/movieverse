@@ -1,0 +1,23 @@
+.similar-movie{
+   display: flex;
+   scroll-behaviour: smooth;
+}
+.similar-movie-container{
+    width: 150px;
+    border-radius: 1px solid white;
+    margin-right: 5px;
+}
+img{
+    width: 150px;
+}
+
+.view-more-btn{
+    background-color:orange;
+    color:black;
+    width: 160px;
+    text-align: center;
+}
+.view-more-btn:hover{
+    cursor: pointer;
+    color:grey;
+}

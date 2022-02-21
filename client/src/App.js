@@ -9,7 +9,6 @@ import store from "./store";
 import {GlobalProvider} from './context/GlobalState'
 
 import Navbar from "./components/layout/Navbar";
-import Landing from "./components/layout/Landing";
 import Register from "./components/auth/Register";
 import Login from "./components/auth/Login";
 import PrivateRoute from "./components/private-route/PrivateRoute";
@@ -25,6 +24,8 @@ import { Genre  } from "./components/dashboard/Genre";
 import { Watched} from "./components/dashboard/Watched";
 import { Watchlist} from "./components/dashboard/Watchlist";
 import { UpcomingMovies} from "./components/dashboard/UpcomingMovies";
+import { DailyPick } from "./components/dashboard/DailyPick/DailyPick";
+import { AZList } from "./components/dashboard/AZList/AZList";
 import Logout  from "./components/dashboard/Logout";
 
 
@@ -60,8 +61,8 @@ class App extends Component {
               <Route exact path="/register" component={Register} />
               <Route exact path="/login" component={Login} />
               <Switch>
-                <PrivateRoute exact path="/dashboard" component={Dashboard} />
-                <PrivateRoute exact path="/Homepage" component={Homepage} />
+                {/* <PrivateRoute exact path="/dashboard" component={Dashboard} /> */}
+                <PrivateRoute exact path="/home" component={Homepage} />
                 <PrivateRoute exact path="/Genre" component={Genre} />
                 <PrivateRoute exact path="/topratedmovies" component={TopRatedMovies} />
                 <PrivateRoute exact path="/nowplaying" component={NowPlaying} />
@@ -70,7 +71,11 @@ class App extends Component {
                 <PrivateRoute exact path="/upcomingmovies" component={UpcomingMovies} />
                 <PrivateRoute exact path="/watched" component={Watched} />
                 <PrivateRoute exact path="/watchlist" component={Watchlist} /> 
+                <PrivateRoute exact path="/daily-pick" component={DailyPick} />
+                <PrivateRoute exact path="/az-list" component={AZList} />
+
                 <PrivateRoute exact path="/logout" component={Logout} />
+
               </Switch>
             </div>
           </Router>

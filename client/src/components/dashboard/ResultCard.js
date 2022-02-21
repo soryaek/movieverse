@@ -1,14 +1,17 @@
-import React, { useContext } from "react";
+import React, { useState, useContext } from "react";
 import Moment from "react-moment";
 import { GlobalContext } from "../../context/GlobalState";
 import Box from '@mui/material/Box';
 import Modal from '@mui/material/Modal';
-
+import { SimilarMovies } from "./SimilarMovies";
+import {Trailer} from './Trailer/Trailer'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faPlay} from '@fortawesome/free-solid-svg-icons'
 
 
 const style = {
   position: 'absolute',
-  top: '30%',
+  top: '20%',
   left: '30%',
   transform: 'translate(-50%, -50%)Modal',
   width: '40%',
@@ -37,9 +40,26 @@ export const ResultCard = ({ movie }) => {
 
   //modal
   const [open, setOpen] = React.useState(false);
-  const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
+  const handleOpen = () => {
+    setOpen(true);
 
+  }
+  
+  const handleClose = () => {
+    setOpen(false)
+    setMore(false)
+    setTrailer(false);
+  };
+  const [more,setMore] = useState(false);
+  const [trailer,setTrailer] = useState(false);
+
+  const viewMore = () => {
+    setMore(true)
+    setTrailer(false);
+  }
+  const showTrailer = () => {
+    setTrailer(true);
+  }
 
   return (
     <div className="result-card">
@@ -69,8 +89,26 @@ export const ResultCard = ({ movie }) => {
             <button onClick={handleClose} className="btn-close">X</button>
             <h4>{movie.title}</h4><br />
             <div>Released Date: {movie.release_date}</div>
-            <div>Vote: {movie.vote_average}</div><br />
-            <div>Overview:  {movie.overview}</div>
+            <div>Vote: {movie.vote_average}/10</div><br />
+            <div>Overview:  {movie.overview}</div><br />
+            <div className="trailer-btn" onClick={showTrailer}> 
+            WATCH TRAILER &nbsp;&nbsp;
+            <FontAwesomeIcon icon={faPlay} />
+            </div>
+            {trailer &&
+              <Trailer id={movie.id}/>
+            }
+       
+            <div className='view-more-btn' onClick={viewMore}>
+            SIMILAR MOVIES &nbsp;&nbsp;
+        
+            </div> 
+            { more ? 
+                <SimilarMovies
+                  id={movie.id} />
+            : ''}
+          
+            
           </Box>
         </Modal>
       </div>
@@ -91,5 +129,6 @@ export const ResultCard = ({ movie }) => {
         </div>
       </div>
     </div>
+    
   );
 };

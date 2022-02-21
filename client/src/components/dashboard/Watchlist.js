@@ -1,5 +1,4 @@
-
-import React, { useContext } from "react";
+import React, { useState,useContext } from "react";
 import { GlobalContext } from "../../context/GlobalState";
 import { MovieCard } from "./MovieCard";
 import { Footer } from "./footer";
@@ -29,7 +28,7 @@ export const Watchlist = () => {
   const { watchlist } = useContext(GlobalContext);
 
   //modal
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
 
@@ -49,7 +48,7 @@ export const Watchlist = () => {
       <div className="movie-page">
         <div className="container">
           <div className="header">
-            <h1 className="heading">My Watchlist</h1>
+            <h3 className="heading">My Watchlist</h3>
             <div className="flt-right">
               <button className="count-pill" onClick={handleOpen}>
                 <FontAwesomeIcon icon={faShareSquare} />
@@ -97,7 +96,10 @@ export const Watchlist = () => {
               ))}
             </div>
           ) : (
-              <h5 className="no-movies">No movies in your list!</h5>
+            <div className="no-movie-container">
+              <h5 className="no-movies">No movies in your watchlist!</h5>
+              {/* <img src="popcorn.jpg" /> */}
+            </div>
             )}
         </div>
 
