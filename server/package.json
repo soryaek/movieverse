@@ -16,6 +16,7 @@
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.18.3",
     "concurrently": "^4.0.1",
+    "dotenv": "^16.0.0",
     "email-js": "^2.0.2",
     "emailjs": "^3.6.0",
     "emailjs-com": "^3.2.0",

@@ -7,6 +7,7 @@ import { SimilarMovies } from "./SimilarMovies";
 import {Trailer} from './Trailer/Trailer'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPlay} from '@fortawesome/free-solid-svg-icons'
+import { faBookmark } from "@fortawesome/free-solid-svg-icons";
 
 
 const style = {
@@ -87,18 +88,26 @@ export const ResultCard = ({ movie }) => {
         >
           <Box sx={style}>
             <button onClick={handleClose} className="btn-close">X</button>
-            <h4>{movie.title}</h4><br />
+            <div className="title-bookmark">
+              <h4>{movie.title}</h4>
+              <FontAwesomeIcon className="faBookmark-icon" 
+              icon={faBookmark} 
+              onClick={() => addMovieToWatchlist(movie)} 
+              title="Add to watchlist"
+              /> &nbsp;
+            </div>
             <div>Released Date: {movie.release_date}</div>
             <div>Vote: {movie.vote_average}/10</div><br />
             <div>Overview:  {movie.overview}</div><br />
             <div className="trailer-btn" onClick={showTrailer}> 
             WATCH TRAILER &nbsp;&nbsp;
-            <FontAwesomeIcon icon={faPlay} />
+            <FontAwesomeIcon icon={faPlay} /> &nbsp;
+
             </div>
+        
             {trailer &&
               <Trailer id={movie.id}/>
             }
-       
             <div className='view-more-btn' onClick={viewMore}>
             SIMILAR MOVIES &nbsp;&nbsp;
         
@@ -122,10 +131,13 @@ export const ResultCard = ({ movie }) => {
           )}
         </div>
         <div className="controls">
-          <button
-            onClick={() => addMovieToWatchlist(movie)}
-          > Add to Favorite   
-         </button>
+          {!watchlist[movie.id] &&
+            <button
+              onClick={() => 
+                addMovieToWatchlist(movie)}
+            > Add to Favorite   
+          </button>
+          }
         </div>
       </div>
     </div>

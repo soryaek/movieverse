@@ -532,17 +532,29 @@ header .nav-links li:last-child {
   margin-bottom:5px;
 
 }
+.faBookmark-icon{
+  width:25px;
+  height: 25px;
+  color: white;
+  margin-left:10px;
+  margin-top:30px;
+}
+.faBookmark-icon:after{
 
-.trailer-btn:hover{
+}
+.trailer-btn:hover, .faBookmark-icon:hover{
   cursor: pointer;
   opacity: .9;
 }
-
+.title-bookmark{
+  display: flex;
+}
 .prev-next-btn{
   text-align: center;
- 
 }
+
 .prev-next-btn button:hover{
   background-color: transparent;
   color:white;
 }
+

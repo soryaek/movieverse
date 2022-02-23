@@ -10,7 +10,7 @@ import { faShareSquare } from '@fortawesome/free-solid-svg-icons';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
-import emailjs from '../../../../server/node_modules/emailjs-com'
+import emailjs from "../../../node_modules/emailjs-com"
 
 
 const style = {
