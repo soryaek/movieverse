@@ -1,8 +1,13 @@
 import React from 'react';
 import {MovieControls } from './MovieControls';
+import ReactStars from "react-rating-stars-component";
+import {Rating} from "./Rating/rating"
+
 
 export const MovieCard = ({ movie, type }) => { //type will be determined whether the movie will be added into watchlist or watched
-    return (
+  
+  return (
+    <div>
       <div className="movie-card">
         <div className="overlay"></div>
         <img
@@ -11,5 +16,7 @@ export const MovieCard = ({ movie, type }) => { //type will be determined whethe
         />
         <MovieControls type={type} movie={movie} />
       </div>
+      {type === 'watched' ? <Rating movie={movie} /> : null}
+    </div>
     );
   };

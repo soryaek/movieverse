@@ -10,6 +10,7 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
 import emailjs from "../../../node_modules/emailjs-com"
+import { SortMovie } from "./Sort/SortMovie";
 
 const style = {
   position: 'absolute',
@@ -39,6 +40,8 @@ export const Watchlist = () => {
     }).catch(err => console.log(err));
     e.target.reset();
     handleClose();
+    setTimeout(()=> alert("Your movielist has been shared!"),1000)
+
   }
 
   return (
@@ -49,14 +52,14 @@ export const Watchlist = () => {
           <div className="header">
             <h3 className="heading">My Watchlist</h3>
             <div className="flt-right">
-              <button className="count-pill" onClick={handleOpen}>
+              <button className="count-pill share-btn" onClick={handleOpen}>
                 <FontAwesomeIcon icon={faShareSquare} />
               </button>
               <span className="count-pill">
                 {watchlist.length} {watchlist.length === 1 ? "Movie" : "Movies"}
               </span>
+              <SortMovie />
             </div>
-  
           </div>
 
           <Modal
@@ -97,7 +100,6 @@ export const Watchlist = () => {
           ) : (
             <div className="no-movie-container">
               <h5 className="no-movies">No movies in your watchlist!</h5>
-              {/* <img src="popcorn.jpg" /> */}
             </div>
             )}
         </div>

@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { GlobalContext } from "../../context/GlobalState";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {faCheck, faTrashAlt} from '@fortawesome/free-solid-svg-icons'
+import {faCheck, faTrashAlt, faStar} from '@fortawesome/free-solid-svg-icons'
 
 export const MovieControls = ({ type, movie }) => {
   const {
@@ -30,15 +30,18 @@ export const MovieControls = ({ type, movie }) => {
       
       {type === "watched" && (
         <>
-          <button className="ctrl-btn" onClick={() => moveToWatchlist(movie)}>
-            <i className="fa-fw far fa-eye-slash"></i>
-          </button>
-          <button
-            className="ctrl-btn"
-            onClick={() => removeFromWatched(movie.id)}
-          >
-          <FontAwesomeIcon icon={faTrashAlt} />  
-          </button>
+          <div>
+            <button title="Add to watchedlist" className="ctrl-btn" onClick={() => moveToWatchlist(movie)}>
+              <i className="fa-fw far fa-eye-slash"></i>
+            </button>
+            <button
+              title="Remove from watchlist"
+              className="ctrl-btn"
+              onClick={() => removeFromWatched(movie.id)}
+            >
+            <FontAwesomeIcon icon={faTrashAlt} />  
+            </button>
+          </div>
         </>
       )}
     </div>

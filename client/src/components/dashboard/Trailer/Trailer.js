@@ -31,8 +31,6 @@ export const Trailer = ({id}) => {
         event.target.playVideo();
     }
   
-  
-  
     const opts = {
       height: '390',
       width:"100%",

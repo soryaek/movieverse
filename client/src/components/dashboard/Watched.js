@@ -53,7 +53,7 @@ export const Watched = () => {
           <div className="header">
             <h3 className="heading">Watched Movies</h3>
             <div className="flt-right">
-              <button className="count-pill" onClick={handleOpen}>
+              <button className="count-pill share-btn" onClick={handleOpen}>
                 <FontAwesomeIcon icon={faShareSquare} />
               </button>
               <span className="count-pill">

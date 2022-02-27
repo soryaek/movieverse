@@ -52,12 +52,14 @@ export const DisplayMovies = ({type}) => {
             <div className="add-page" onLoad={getMovies}>
                 <h4 className="top-rated-movies type">{header}</h4>
             </div>
-            {/* <div className="prev-next-btn">
-                <button onClick={getPageNumber(2)}>2</button> 
-                <button onClick={getPageNumber(2)}>2</button> 
-                <button onClick={getPageNumber(3)}>3</button> 
-                <button onClick={getPageNumber(4)}>4</button> 
-            </div> */}
+{/* 
+            <div className="prev-next-btn">
+                <button>1</button> 
+                <button>2</button> 
+                <button>3</button> 
+                <button>4</button> 
+            </div>  */}
+        
             {movies.length > 0 && (
                 <ul className="results">
                     {movies.map(movie => (
@@ -67,6 +69,8 @@ export const DisplayMovies = ({type}) => {
                     )) }
                 </ul>
             )} <br /><br /><br /><br />
+
+
             <Footer />
     </div>
     );
