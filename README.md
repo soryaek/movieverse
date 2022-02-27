@@ -28,6 +28,8 @@
 <h4>Search for movies</h4>
 <img src="client/public/search.png" alt="search page" width="600px" height="auto"/>
 
+<h4>Daily Pick</h4>
+<img src="client/public/spinning-wheel.png" alt="search page" width="600px" height="auto"/>
 
 <h2>How to run this web application in the local environment from step by step:</h2> 
 <h4> Step 1: Download packages in both client and server folders</h4>
