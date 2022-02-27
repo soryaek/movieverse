@@ -10,13 +10,17 @@
 <img src="client/public/signup.png" alt="register page" width="600px" height="auto"/>
 
 <h4>Homepage</h4>
-<img src="client/public/home.png" alt="homepage" width="600px" height="auto"/>
+<img src="client/public/home.jpg" alt="homepage" width="600px" height="auto"/>
+
+<h4>Details</h4>
+<img src="client/public/details.png" alt="ditails page" width="600px" height="auto"/>
 
 <h4>Watchlist</h4>
 <img src="client/public/watchlist.png" alt="watchlist" width="600px" height="auto"/>
 
-<h4>Details</h4>
-<img src="client/public/details.png" alt="ditails page" width="600px" height="auto"/>
+<h4>Watchedlist</h4>
+<img src="client/public/watchedlist.png" alt="watchlist" width="600px" height="auto"/>
+
 
 <h4>Share watchlist/watchedlist</h4>
 <img src="client/public/sharelist.png" alt="share page" width="600px" height="auto"/>
