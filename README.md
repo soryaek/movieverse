@@ -47,8 +47,9 @@ Enter this command line <b>cd server</b> and then <b>npm install</b></li>
   <li>The application should be running now. If it's not showing on the browser, try to reinstall the packages by removing the <b>node modules</b>
   from client folder and server folder and then start over again from Step 1 </li>
 </ul>
-
-
+<h4> Step 3: Test the application</h4>
+<p>Email: guest@gmail.com</p>
+<p>Password: Guest#1</p>
   
   
   
