@@ -1,5 +1,5 @@
 # movieverse
-<p> A web application where users are able to search for all types of movies as well as search by category using a third-party API. User authentication is required for accessing homepage and all other features. The application has functionalities that allow users to add/remove movies in/from watchlist or watched list and the users also can share the list with friends by sending through email.<p>
+<p> A full-stack application where users are able to watch movie trailers, rate movies, remove/add movies from/to watchlist as well as search movies by category using a third-party API. User authentication is required for accessing homepage and all other features. In addtion, users can share their watchlist with their friends.
   <br><p><b>> Coded in React.js, Node.js, MongoDB, Express.js, and Restful API
 </b> </p>
 <hr
