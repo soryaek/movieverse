@@ -73,7 +73,6 @@ class App extends Component {
                 <PrivateRoute exact path="/watchlist" component={Watchlist} /> 
                 <PrivateRoute exact path="/daily-pick" component={DailyPick} />
                 <PrivateRoute exact path="/az-list" component={AZList} />
-
                 <PrivateRoute exact path="/logout" component={Logout} />
 
               </Switch>

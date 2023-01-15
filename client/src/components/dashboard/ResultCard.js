@@ -132,11 +132,7 @@ export const ResultCard = ({ movie }) => {
         </div>
         <div className="controls">
           {!watchlist[movie.id] &&
-            <button
-              onClick={() => 
-                addMovieToWatchlist(movie)}
-            > Add to Favorite   
-          </button>
+            <button onClick={() => addMovieToWatchlist(movie)}> Add to Favorite </button>
           }
         </div>
       </div>

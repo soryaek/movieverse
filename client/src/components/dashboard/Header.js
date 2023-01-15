@@ -19,39 +19,39 @@ export const Header = () => {
             <Link to="/home"><img src="movieverse.png" /></Link>
           </div>
           <ul className="nav-links">
-            <li class="nav-item">
+            <li className="nav-item">
               <Link to="/genre">Genre</Link>
             </li>
             {/* <li class="nav-item">
               <Link to="/people">People</Link>
             </li>
           */}
-             <li class="nav-item">
+            <li className="nav-item">
               <Link to="/watchlist">Favorite 
               {watchlist.length > 0 ? 
                 <span style={{color:'red', paddingLeft:'2px', fontSize:'25px'}}>{watchlist.length}</span>              
               : null}
               </Link>
             </li>
-            <li class="nav-item">
+            <li className="nav-item">
               <Link to="/watched">Watched 
               {watched.length > 0 ? 
                 <span style={{color:'red', paddingLeft:'2px', fontSize:'25px'}}>{watched.length}</span>              
               : null}
               </Link>
             </li>
-            <li class="nav-item">
+            <li className="nav-item">
               <Link to="/daily-pick">Daily Pick</Link>
             </li>
-            <li class="nav-item">
+            <li className="nav-item">
               <Link to="/az-list">A-Z List</Link>
             </li>
-            <li class="nav-item">
+            <li className="nav-item">
               <Link to="/SearchAdd" className="search-icon">
                 <FontAwesomeIcon icon={faSearch} />
               </Link>
             </li>
-            <li class="nav-item">
+            <li className="nav-item">
               <Link to="/logout" className="logout-btn">
                 <FontAwesomeIcon icon={faPowerOff} />
               </Link>
