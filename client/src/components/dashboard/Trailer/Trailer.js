@@ -8,10 +8,16 @@ export const Trailer = ({id}) => {
         fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=a64879763b86ab20c959a57ad7c5d005&append_to_response=videos`)
         .then(res => res.json())
         .then((data) => {
-            if(!data.errors){
-                setYoutubeId(data.videos.results[0].key)
-            } else {
-                setYoutubeId([data.videos.results[1].key]); 
+            if(!data.errors && data.videos.results.length > 0 ) {
+                for (let i=0; i < data.videos.results.length; i++) {
+                    if (data.videos.results[i]) {
+                        setYoutubeId(data.videos.results[i].key);
+                        return
+                    }
+                }
+            } 
+            else {
+                setYoutubeId('')
             }
         });
     }
