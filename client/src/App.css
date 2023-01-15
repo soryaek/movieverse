@@ -218,6 +218,7 @@ header .nav-links li:last-child {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  position: relative
   /* margin-left:5%;
   margin-right:5%; */
 }
@@ -551,12 +552,18 @@ header .nav-links li:last-child {
 .title-bookmark{
   display: flex;
 }
-.prev-next-btn{
+
+/* previous-next buttons */
+.prev-next-btns {
   text-align: center;
 }
 
-.prev-next-btn button:hover{
+.prev-next-btns button:hover{
   background-color: transparent;
   color:white;
 }
-
+.prev-next-btn:focus {
+  background-color: transparent;
+  color: white;
+  font-weight: bold;
+}
