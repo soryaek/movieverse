@@ -16,6 +16,9 @@ export const DisplayMovies = ({type}) => {
     if (type === 'trending/all/day') {
         path = `${type}`;
     }
+    if (type === 'AZ') {
+        path = 'movie/now_playing'
+    } 
     
     const getMovies = (pageNumber) => {
         fetch(`https://api.themoviedb.org/3/${path}?api_key=a64879763b86ab20c959a57ad7c5d005&language=en-US&page=${pageNumber}&adult=false`)
@@ -23,6 +26,7 @@ export const DisplayMovies = ({type}) => {
         .then((data) => {
             if(!data.errors){
                 setMovies(data.results);
+                console.log("**", data.results);
             } else {
                 setMovies([]); 
             }
@@ -43,6 +47,9 @@ export const DisplayMovies = ({type}) => {
             case "upcoming":
                 setHeader("Upcoming Movies")
                 break;
+            case "AZ":
+                setHeader("")
+                break;
             default:
                 break;
         }
@@ -62,8 +69,8 @@ export const DisplayMovies = ({type}) => {
     }
 
     return (
-        <div>  
-            <Header />
+        <div>
+            {type !== 'AZ' ? <Header /> : null}
             <div className="add-page" onLoad={getMovies}>
                 <h4 className="top-rated-movies type">{header}</h4>
             </div>
