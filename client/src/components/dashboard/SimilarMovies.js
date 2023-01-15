@@ -11,7 +11,6 @@ export const SimilarMovies = ({id}) =>{
         .then((data) => {
             if(!data.errors){
                 setMovies(data.results);
-                console.log()
             } else {
                 setMovies([]); 
             }

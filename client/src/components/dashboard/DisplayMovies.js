@@ -15,7 +15,6 @@ export const DisplayMovies = ({type}) => {
         .then((data) => {
             if(!data.errors){
                 setMovies(data.results);
-                console.log(data.results)
             } else {
                 setMovies([]); 
             }

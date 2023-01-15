@@ -1,6 +1,5 @@
-import React, {useState} from 'react' 
+import React from 'react';
 import ReactStars from "react-rating-stars-component";
-
 
 export const Rating = ({movie}) => {
     const ratingStars = {
