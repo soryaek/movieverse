@@ -3,6 +3,7 @@ import YouTube from 'react-youtube';
 
 export const Trailer = ({id}) => {
     const [youtubeId, setYoutubeId] = useState([]);
+    
     const fetchYoutubeId = () => {
         fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=a64879763b86ab20c959a57ad7c5d005&append_to_response=videos`)
         .then(res => res.json())
@@ -14,6 +15,7 @@ export const Trailer = ({id}) => {
             }
         });
     }
+
     useEffect(() => {
         fetchYoutubeId();
     }, []); 
