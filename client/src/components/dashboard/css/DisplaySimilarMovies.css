@@ -3,9 +3,9 @@
    scroll-behaviour: smooth;
 }
 .similar-movie-container{
-    width: 150px;
+    width: 190px;
     border-radius: 1px solid white;
-    margin-right: 5px;
+    margin: 5px;
 }
 img{
     width: 150px;

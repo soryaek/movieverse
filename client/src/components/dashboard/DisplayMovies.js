@@ -12,7 +12,6 @@ export const DisplayMovies = ({type}) => {
     if (type === 'now_playing' || type === 'top_rated' ||  type === 'upcoming') {
         path = `movie/${type}`
     }
-    
     if (type === 'trending/all/day') {
         path = `${type}`;
     }
@@ -26,7 +25,6 @@ export const DisplayMovies = ({type}) => {
         .then((data) => {
             if(!data.errors){
                 setMovies(data.results);
-                console.log("**", data.results);
             } else {
                 setMovies([]); 
             }
