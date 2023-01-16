@@ -77,8 +77,8 @@ export const Watchlist = () => {
                     <input type="email" name="email" required/>
                     {watchlist.length > 0 ? (
                         <div className="movie-grid">
-                            {watchlist.map((movie) => (
-                                <div>
+                            {watchlist.map((movie, index) => (
+                                <div key={index}>
                                     <input type="hidden" name='title' value={movie.title} />
                                     <input type="hidden" name='poster' value={`src=https://image.tmdb.org/t/p/w200${movie.poster_path}`} />
                                 </div>

@@ -40,7 +40,7 @@ export const ResultCard = ({ movie }) => {
   const watchedDisabled = storedMovieWatched ? true : false;
 
   //modal
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = useState(false);
   const handleOpen = () => {
     setOpen(true);
   }
@@ -50,7 +50,7 @@ export const ResultCard = ({ movie }) => {
     setMore(false)
     setTrailer(false);
   };
-  const [more,setMore] = useState(false);
+  const [more, setMore] = useState(false);
   const [trailer,setTrailer] = useState(false);
 
   const viewMore = () => {
@@ -79,44 +79,22 @@ export const ResultCard = ({ movie }) => {
             </div>
           )}
 
-        <Modal
-          open={open}
-          onClose={handleClose}
-          aria-labelledby="modal-modal-title"
-          aria-describedby="modal-modal-description"
-        >
+        <Modal open={open} onClose={handleClose} aria-labelledby="modal-modal-title" aria-describedby="modal-modal-description">
           <Box sx={style}>
             <button onClick={handleClose} className="btn-close">X</button>
             <div className="title-bookmark">
-              <h4>{movie.title}</h4>
-              <FontAwesomeIcon className="faBookmark-icon" 
-              icon={faBookmark} 
-              onClick={() => addMovieToWatchlist(movie)} 
-              title="Add to watchlist"
-              /> &nbsp;
+              {movie.title ? <h4>{movie.title}</h4> : <h4>NA</h4>}
+              <FontAwesomeIcon className="faBookmark-icon" icon={faBookmark} onClick={() => addMovieToWatchlist(movie)} title="Add to watchlist"/> &nbsp;
             </div>
             <div>Released Date: {movie.release_date}</div>
             <div>Vote: {movie.vote_average}/10</div><br />
             <div>Overview:  {movie.overview}</div><br />
-            <div className="trailer-btn" onClick={showTrailer}> 
-            WATCH TRAILER &nbsp;&nbsp;
-            <FontAwesomeIcon icon={faPlay} /> &nbsp;
-
+            <div className="trailer-btn" onClick={showTrailer}>WATCH TRAILER &nbsp;&nbsp;
+              <FontAwesomeIcon icon={faPlay} /> &nbsp;
             </div>
-        
-            {trailer &&
-              <Trailer id={movie.id}/>
-            }
-            <div className='view-more-btn' onClick={viewMore}>
-            SIMILAR MOVIES &nbsp;&nbsp;
-        
-            </div> 
-            { more ? 
-                <SimilarMovies
-                  id={movie.id} />
-            : ''}
-          
-            
+            {trailer &&  <Trailer id={movie.id}/> }
+            <div className='view-more-btn' onClick={viewMore}> SIMILAR MOVIES &nbsp;&nbsp; </div> 
+            { more ? <SimilarMovies id={movie.id} /> : ''}
           </Box>
         </Modal>
       </div>
