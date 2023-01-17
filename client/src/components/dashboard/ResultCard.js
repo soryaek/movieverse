@@ -9,7 +9,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPlay} from '@fortawesome/free-solid-svg-icons'
 import { faBookmark } from "@fortawesome/free-solid-svg-icons";
 
-
 const style = {
   position: 'absolute',
   top: '20%',
@@ -32,11 +31,7 @@ export const ResultCard = ({ movie }) => {
   let storedMovie = watchlist.find((o) => o.id === movie.id);
   let storedMovieWatched = watched.find((o) => o.id === movie.id);
 
-  const watchlistDisabled = storedMovie
-    ? true
-    : storedMovieWatched
-      ? true
-      : false;
+  const watchlistDisabled = storedMovie ? true : storedMovieWatched ? true : false;
   const watchedDisabled = storedMovieWatched ? true : false;
 
   //modal
@@ -50,6 +45,7 @@ export const ResultCard = ({ movie }) => {
     setMore(false)
     setTrailer(false);
   };
+
   const [more, setMore] = useState(false);
   const [trailer,setTrailer] = useState(false);
 
@@ -84,7 +80,7 @@ export const ResultCard = ({ movie }) => {
             <button onClick={handleClose} className="btn-close">X</button>
             <div className="title-bookmark">
               {movie.title ? <h4>{movie.title}</h4> : <h4>NA</h4>}
-              <FontAwesomeIcon className="faBookmark-icon" icon={faBookmark} onClick={() => addMovieToWatchlist(movie)} title="Add to watchlist"/> &nbsp;
+              <FontAwesomeIcon className="faBookmark-icon" icon={faBookmark} onClick={() => addMovieToWatchlist(movie)} title="Add to favorite"/> &nbsp;
             </div>
             <div>Released Date: {movie.release_date}</div>
             <div>Vote: {movie.vote_average}/10</div><br />
