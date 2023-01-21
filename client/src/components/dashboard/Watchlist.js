@@ -70,8 +70,8 @@ export const Watchlist = () => {
           >
             <Box sx={style}>
               
-              <Typography id="modal-modal-title" variant="h6" component="h2">
-                Want to share your watchlist? Enter an email below!
+              <Typography id="modal-modal-title" variant="h6" component="h2" style={{textAlign:'center'}}>
+                Enter your email below to share your watchlist!
               </Typography>
               <form onSubmit={SendEmail} >
                     <input type="email" name="email" required/>

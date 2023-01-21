@@ -70,8 +70,8 @@ export const Watched = () => {
           >
             <Box sx={style}>
 
-              <Typography id="modal-modal-title" variant="h6" component="h2">
-                Want to share your watched list? Enter an email below!
+              <Typography id="modal-modal-title" variant="h6" component="h2" style={{textAlign:'center'}}>
+                Enter your email below to share your watched list!
               </Typography>
               <form onSubmit={SendEmail} >
                 <input type="email" name="email" required />
