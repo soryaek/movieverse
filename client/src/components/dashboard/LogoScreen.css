@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css?family=Anton|Roboto');
+
+.word {
+	font-family: 'Anton', sans-serif;
+	perspective: 1000px; 
+    background-color: black;
+    margin: auto;
+    padding: 10px;
+    height: 100vh;
+}
+.word h1 {
+    font-size: 12em;
+    position: absolute;
+    top: 35%;
+    left: 30%;
+    color:pink;
+    animation: 4s ease-out 0s 1 FadeIn;
+ }
+
+ @keyframes FadeIn {
+    0% {
+      opacity:0;
+    }
+    100% {
+      opacity:1;
+    }
+}
+

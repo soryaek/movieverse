@@ -70,15 +70,15 @@ export const Watchlist = () => {
           >
             <Box sx={style}>
               
-              <Typography id="modal-modal-title" variant="h6" component="h2">
-                Want to share your watchlist? Enter an email below!
+              <Typography id="modal-modal-title" variant="h6" component="h2" style={{textAlign:'center'}}>
+                Enter your email below to share your watchlist!
               </Typography>
               <form onSubmit={SendEmail} >
                     <input type="email" name="email" required/>
                     {watchlist.length > 0 ? (
                         <div className="movie-grid">
-                            {watchlist.map((movie) => (
-                                <div>
+                            {watchlist.map((movie, index) => (
+                                <div key={index}>
                                     <input type="hidden" name='title' value={movie.title} />
                                     <input type="hidden" name='poster' value={`src=https://image.tmdb.org/t/p/w200${movie.poster_path}`} />
                                 </div>
