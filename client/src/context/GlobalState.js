@@ -16,17 +16,20 @@ export const GlobalContext = createContext(initialState);
 export const GlobalProvider = (props) => {
  
   const [state, dispatch] = useReducer(AppReducer, initialState);
+
+  const filteredUniqueMovies = (movieList) => {
+    return movieList.filter((movie, index, self) =>
+      index === self.findIndex((m) => m.id === movie.id)
+    );
+  };
   
-  useEffect(() => {
-    const filteredUniqueMovies = (movieList) => {
-      return movieList.filter((movie, index, self) =>
-        index === self.findIndex((m) => m.id === movie.id)
-      );
-    };
-  
+  useEffect(() => {  
     localStorage.setItem("watchlist", JSON.stringify(filteredUniqueMovies(state.watchlist)));
+  }, [state.watchlist]);
+
+  useEffect(() => {
     localStorage.setItem("watched", JSON.stringify(filteredUniqueMovies(state.watched)));
-  }, [state.watchlist, state.watched]);
+  }, [state.watched]);
 
   // actions
   const addMovieToWatchlist = (movie) => {
