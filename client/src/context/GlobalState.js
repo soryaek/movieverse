@@ -2,7 +2,6 @@
 import React, { createContext, useReducer, useEffect } from "react";
 import AppReducer from "./AppReducer";
 
-// initial state
 const initialState = {
   watchlist: localStorage.getItem("watchlist")
     ? JSON.parse(localStorage.getItem("watchlist"))
@@ -12,19 +11,22 @@ const initialState = {
     : [],
 };
 
-// create context
 export const GlobalContext = createContext(initialState);
 
-// provider components
 export const GlobalProvider = (props) => {
  
-  //state and dispatch work similarly to count and setCount but state works with object
-  const [state, dispatch] = useReducer(AppReducer, initialState); //AppReducer: a function that will perform a state to new state
-
+  const [state, dispatch] = useReducer(AppReducer, initialState);
+  
   useEffect(() => {
-    localStorage.setItem("watchlist", JSON.stringify(state.watchlist));
-    localStorage.setItem("watched", JSON.stringify(state.watched));
-  }, [state]);
+    const filteredUniqueMovies = (movieList) => {
+      return movieList.filter((movie, index, self) =>
+        index === self.findIndex((m) => m.id === movie.id)
+      );
+    };
+  
+    localStorage.setItem("watchlist", JSON.stringify(filteredUniqueMovies(state.watchlist)));
+    localStorage.setItem("watched", JSON.stringify(filteredUniqueMovies(state.watched)));
+  }, [state.watchlist, state.watched]);
 
   // actions
   const addMovieToWatchlist = (movie) => {

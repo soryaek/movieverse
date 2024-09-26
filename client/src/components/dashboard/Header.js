@@ -9,7 +9,7 @@ export const Header = () => {
   const { watchlist } = useContext(GlobalContext);
   const { watched } = useContext(GlobalContext);
 
-  console.log(watchlist);
+  console.log("watchlist", watchlist);
   
   return (
     <header>

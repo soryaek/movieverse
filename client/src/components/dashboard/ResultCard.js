@@ -30,6 +30,7 @@ export const ResultCard = ({ movie }) => {
 
   let storedMovie = watchlist.find((o) => o.id === movie.id);
   let storedMovieWatched = watched.find((o) => o.id === movie.id);
+  console.log("storedMovieWatched", storedMovieWatched);
 
   const watchlistDisabled = storedMovie ? true : storedMovieWatched ? true : false;
   const watchedDisabled = storedMovieWatched ? true : false;
@@ -79,7 +80,7 @@ export const ResultCard = ({ movie }) => {
           <Box sx={style}>
             <button onClick={handleClose} className="btn-close">X</button>
             <div className="title-bookmark">
-              {movie.title ? <h4>{movie.title}</h4> : <h4>NA</h4>}
+              {movie.title ? <h4>{movie.title}</h4> : <h4>Not Available</h4>}
               <FontAwesomeIcon className="faBookmark-icon" icon={faBookmark} onClick={() => addMovieToWatchlist(movie)} title="Add to favorite"/> &nbsp;
             </div>
             <div>Released Date: {movie.release_date}</div>
