@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { ResultCard } from './ResultCard';
 import { Footer } from './footer';
 
-export const DisplayMovies = ({ type, limit = 50, title }) => {
+export const DisplayMovies = ({ type, limit = 50, title, showPrevNextBtn=true }) => {
   const [movies, setMovies] = useState([]);
   const [header, setHeader] = useState('');
   const [pageNumber, setPageNumber] = useState(1);
@@ -82,14 +82,16 @@ export const DisplayMovies = ({ type, limit = 50, title }) => {
       <div className="add-page">
         <h4 className="top-rated-movies type">{title || header}</h4>
       </div>
-      <div className="prev-next-btns">
-        <button className="prev-next-btn" onClick={() => setPageNumber(pageNumber - 1)}>PREV</button>
-        <button className="prev-next-btn" onClick={() => setPageNumber(1)}>1</button>
-        <button className="prev-next-btn" onClick={() => setPageNumber(2)}>2</button>
-        <button className="prev-next-btn" onClick={() => setPageNumber(3)}>3</button>
-        <button className="prev-next-btn" onClick={() => setPageNumber(4)}>4</button>
-        <button className="prev-next-btn" onClick={() => setPageNumber(pageNumber + 1)}>NEXT</button>
-      </div>
+      {showPrevNextBtn && 
+        <div className="prev-next-btns">
+            <button className="prev-next-btn" onClick={() => setPageNumber(pageNumber - 1)}>PREV</button>
+            <button className="prev-next-btn" onClick={() => setPageNumber(1)}>1</button>
+            <button className="prev-next-btn" onClick={() => setPageNumber(2)}>2</button>
+            <button className="prev-next-btn" onClick={() => setPageNumber(3)}>3</button>
+            <button className="prev-next-btn" onClick={() => setPageNumber(4)}>4</button>
+            <button className="prev-next-btn" onClick={() => setPageNumber(pageNumber + 1)}>NEXT</button>
+        </div>
+      }
       <div className="scroller-container" style={{ position: 'relative' }}>
         <button className="scroll-btn left" onClick={() => scrollLeft(scrollerRef)}>
           &#8249;
