@@ -9,8 +9,6 @@ export const Header = () => {
   const { watchlist } = useContext(GlobalContext);
   const { watched } = useContext(GlobalContext);
 
-  console.log("watchlist", watchlist);
-  
   return (
     <header>
       <div className="container">
