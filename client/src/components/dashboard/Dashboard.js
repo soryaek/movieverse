@@ -5,7 +5,6 @@ import { logoutUser } from "../../actions/authActions";
 import {Homepage} from "./Homepage";
 
 class Dashboard extends Component {
-
   render() {
     return (
       <div>

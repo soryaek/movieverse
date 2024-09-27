@@ -17,7 +17,10 @@ const style = {
   width: '40%',
   bgcolor: 'black',
   p: 4,
-  color: 'white'
+  color: 'white',
+  height: '500px',
+  overflow:'auto',
+  scrollbarWidth: 'thin', // For Firefox: make scrollbar thin
 };
 
 export const ResultCard = ({ movie }) => {

@@ -218,9 +218,8 @@ header .nav-links li:last-child {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  position: relative
-  /* margin-left:5%;
-  margin-right:5%; */
+  position: relative;
+  margin-bottom:50px;
 }
 
 .results li {
@@ -561,6 +560,7 @@ header .nav-links li:last-child {
 .prev-next-btns button:hover{
   background-color: transparent;
   color:white;
+  cursor: pointer;
 }
 .prev-next-btn:focus {
   background-color: transparent;
