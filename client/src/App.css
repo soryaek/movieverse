@@ -212,12 +212,72 @@ header .nav-links li:last-child {
 .search-btn:hover {
   cursor: pointer;
 }
+
+
+.results.scroller {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  width: 100%;
+}
+
+.results.scroller {
+  display: flex;
+  flex-wrap: nowrap; /* No wrapping for horizontal scrolling */
+  overflow-x: auto; /* Enable horizontal scrolling */
+  scroll-behavior: smooth; /* Smooth scrolling for better UX */
+  width: 100%; /* Take up the full width of the container */
+  padding: 10px 0; /* Add some space on top and bottom */
+  margin-bottom: 50px; /* Spacing from other elements */
+  scrollbar-width: none; /* Hides scrollbar in Firefox */
+}
+
+.results.scroller::-webkit-scrollbar {
+  display: none; /* Hides scrollbar in Chrome, Safari, and Edge */
+}
+
+.results li {
+  list-style: none;
+  flex: 0 0 auto; /* Prevent items from shrinking */
+  margin-right: 15px; /* Space between movie cards */
+}
+
+.results img {
+  width: 200px;
+  height: 300px;
+  border-radius: 10px;
+}
+.scroll-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.scroll-btn.left {
+  left: 10px;
+}
+
+.scroll-btn.right {
+  right: 10px;
+}
+
+.scroll-btn:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
 .results {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   position: relative;
   margin-bottom:50px;
+  column-gap: 5px;
 }
 
 .results li {

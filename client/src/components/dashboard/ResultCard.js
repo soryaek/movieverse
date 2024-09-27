@@ -18,7 +18,7 @@ const style = {
   bgcolor: 'black',
   p: 4,
   color: 'white',
-  height: '500px',
+  height: '700px',
   overflow:'auto',
   scrollbarWidth: 'thin', // For Firefox: make scrollbar thin
 };
@@ -42,6 +42,7 @@ export const ResultCard = ({ movie }) => {
   const [open, setOpen] = useState(false);
   const handleOpen = () => {
     setOpen(true);
+    showTrailer(true);
   }
   
   const handleClose = () => {
