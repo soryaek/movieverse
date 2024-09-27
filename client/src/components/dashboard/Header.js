@@ -22,10 +22,6 @@ export const Header = () => {
             <li className="nav-item">
               <Link to="/genre">Genre</Link>
             </li>
-            {/* <li class="nav-item">
-              <Link to="/people">People</Link>
-            </li>
-          */}
             <li className="nav-item">
               <Link to="/watchlist">Favorite 
               {watchlist.length > 0 ? 

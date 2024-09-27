@@ -1,6 +1,5 @@
-import React, {useState, useEffect} from 'react';
+import React from 'react';
 import { DisplayMovies } from './DisplayMovies';
-
 
 export const NowPlaying = () => {
     return(

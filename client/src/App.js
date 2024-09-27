@@ -28,6 +28,7 @@ import { DailyPick } from "./components/dashboard/DailyPick/DailyPick";
 import { AZList } from "./components/dashboard/AZList/AZList";
 import Logout  from "./components/dashboard/Logout";
 import LogoScreen from "./components/dashboard/LogoScreen";
+import Browse from "./components/dashboard/Browse";
 
 
 //Check for token to keep user logged in
@@ -64,7 +65,7 @@ class App extends Component {
               <Switch>
                 {/* <PrivateRoute exact path="/dashboard" component={Dashboard} /> */}
                 <PrivateRoute exact path="/welcome" component={LogoScreen} />
-                <PrivateRoute exact path="/home" component={Homepage} />
+                <PrivateRoute exact path="/home" component={Browse} />
                 <PrivateRoute exact path="/Genre" component={Genre} />
                 <PrivateRoute exact path="/topratedmovies" component={TopRatedMovies} />
                 <PrivateRoute exact path="/nowplaying" component={NowPlaying} />

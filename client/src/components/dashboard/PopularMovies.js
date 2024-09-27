@@ -1,11 +1,12 @@
 
 import React from 'react';
 import { DisplayMovies } from './DisplayMovies';
+import { Header } from './Header';
 
 export const PopularMovies = () => {
     return(
         <div>
-            {/* popular movies */}
+            <Header />
             <DisplayMovies type='trending/all/day' />
         </div> 
     )

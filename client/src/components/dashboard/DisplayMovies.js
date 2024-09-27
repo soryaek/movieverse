@@ -68,7 +68,7 @@ export const DisplayMovies = ({type}) => {
 
     return (
         <div>
-            {type !== 'AZ' ? <Header /> : null}
+            {/* {type !== 'AZ' ? <Header /> : null} */}
             <div className="add-page" onLoad={getMovies}>
                 <h4 className="top-rated-movies type">{header}</h4>
             </div>
