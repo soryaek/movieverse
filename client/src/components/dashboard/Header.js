@@ -16,7 +16,7 @@ export const Header = () => {
       <div className="container">
         <div className="inner-content">
           <div className="brand" style={{paddingTop:"50px;"}}>
-            <Link to="/home"><img src="movieverse.png" /></Link>
+            <Link to="/browse"><img src="movieverse.png" /></Link>
           </div>
           <ul className="nav-links">
             <li className="nav-item">

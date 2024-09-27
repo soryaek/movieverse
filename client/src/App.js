@@ -65,7 +65,7 @@ class App extends Component {
               <Switch>
                 {/* <PrivateRoute exact path="/dashboard" component={Dashboard} /> */}
                 <PrivateRoute exact path="/welcome" component={LogoScreen} />
-                <PrivateRoute exact path="/home" component={Browse} />
+                <PrivateRoute exact path="/browse" component={Browse} />
                 <PrivateRoute exact path="/Genre" component={Genre} />
                 <PrivateRoute exact path="/topratedmovies" component={TopRatedMovies} />
                 <PrivateRoute exact path="/nowplaying" component={NowPlaying} />

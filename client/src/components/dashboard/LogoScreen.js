@@ -16,7 +16,7 @@ const LogoScreen = () => {
             <div class="word">
                 <h1>MOVIEVERSE</h1>
             </div>
-            {reroute && <Redirect to="/home"/>}
+            {reroute && <Redirect to="/browse"/>}
         </div>
     )
 };

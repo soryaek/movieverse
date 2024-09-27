@@ -23,7 +23,7 @@ class Logout extends Component {
                         <br />
                         <h4>Are you sure you want to log out?</h4>
 
-                        <Link to="/home">
+                        <Link to="/browse">
                             <button
                                 style={{
                                     width: "170px",
