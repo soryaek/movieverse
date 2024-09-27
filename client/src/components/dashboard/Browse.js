@@ -20,10 +20,10 @@ const Browse = () => {
 
             </div>
             <div style={{marginTop: '20px'}}>
-                <DisplayMovies type='trending/all/day' limit={20}/>
-                <DisplayMovies type='top_rated' limit={20}/>
-                <DisplayMovies type='now_playing' limit={20}/>
-                <DisplayMovies type='upcoming' limit={20}/>
+                <DisplayMovies type='trending/all/day' limit={20} showPrevNextBtn={false}/>
+                <DisplayMovies type='top_rated' limit={20} showPrevNextBtn={false}/>
+                <DisplayMovies type='now_playing' limit={20} showPrevNextBtn={false}/>
+                <DisplayMovies type='upcoming' limit={20} showPrevNextBtn={false}/>
             </div>
         </div>
     )
